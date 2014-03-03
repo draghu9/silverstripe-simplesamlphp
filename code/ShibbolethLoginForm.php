@@ -38,7 +38,7 @@ class ShibbolethLoginForm extends LoginForm {
 			$fields->push(new HiddenField('BackURL', 'BackURL', $backURL));
 		}
 
-		$actions = new FieldSet();
+		$actions = new FieldList();
 		if(Member::currentUserID()) {
 			$fields->push(new LiteralField('iframe', "<iframe style=\"border:0 none; width:100%; height:500px;\" src=\"".Director::absoluteBaseURL()."/shibboleth/thirdparty/simplesaml/www/module.php/core/authenticate.php?as=default-sp\"></iframe>"));
 		} else {

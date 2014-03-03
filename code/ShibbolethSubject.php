@@ -8,7 +8,7 @@
  *	@package shibboleth
  **/
 
-class ShibbolethSubject extends DataObjectDecorator {
+class ShibbolethSubject extends DataExtension {
 	
 	// Add the unique ID field
 	function extraStatics() {

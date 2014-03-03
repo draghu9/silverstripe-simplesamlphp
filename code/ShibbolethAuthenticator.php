@@ -86,8 +86,8 @@ class ShibbolethAuthenticator extends Authenticator {
 	 * @return form returns the login form to use with this authentication method
 	 */
 	public static function get_login_form(Controller $controller) {
-		$fields = new FieldSet();
-		$actions = new FieldSet(
+		$fields = new FieldList();
+		$actions = new FieldList(
 			new FormAction('dologin', 'Log in')
 		);
 		$form = Object::create("ShibbolethLoginForm", $controller, "LoginForm", $fields, $actions);
