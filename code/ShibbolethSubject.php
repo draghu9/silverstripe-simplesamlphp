@@ -21,13 +21,12 @@ class ShibbolethSubject extends DataExtension {
 			),
 		);
 	}*/
-    public static $db = array(
-        'db' => array(
-            'UniqueIdentifier' => 'Varchar(256)',
-        ),
-        'indexes' => array(
-            'UniqueIdentifier' => '(UniqueIdentifier)',
-        ),
+
+    static $db = array(
+        'UniqueIdentifier' => 'Varchar(256)',
+    );
+    public static $indexes = array(
+        'UniqueIdentifier' => '(UniqueIdentifier)',
     );
 
 	// make sure the unique ID is set on every member
