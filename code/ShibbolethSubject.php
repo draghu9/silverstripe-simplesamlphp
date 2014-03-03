@@ -11,7 +11,7 @@
 class ShibbolethSubject extends DataExtension {
 	
 	// Add the unique ID field
-	function extraStatics() {
+	/*function extraStatics() {
 		return array(
 			'db' => array(
 				'UniqueIdentifier' => 'Varchar(256)',
@@ -20,7 +20,15 @@ class ShibbolethSubject extends DataExtension {
 				'UniqueIdentifier' => '(UniqueIdentifier)',
 			),
 		);
-	}
+	}*/
+    public static $db = array(
+        'db' => array(
+            'UniqueIdentifier' => 'Varchar(256)',
+        ),
+        'indexes' => array(
+            'UniqueIdentifier' => '(UniqueIdentifier)',
+        ),
+    );
 
 	// make sure the unique ID is set on every member
 	function onBeforeWrite() {
